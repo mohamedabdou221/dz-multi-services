@@ -18,6 +18,9 @@
 - [x] Push des branches main et develop sur GitHub
 - [x] Configuration Netlify
 - [x] Déploiement Netlify réussi
+- [x] Installation de @react-pdf/renderer
+- [x] Création du test de génération PDF
+- [x] API endpoint /api/test-pdf créée
 
 ## ⏳ Tâches en cours
 
