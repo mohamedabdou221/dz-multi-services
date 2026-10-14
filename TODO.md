@@ -16,18 +16,19 @@
 - [x] Migrations Supabase appliquées avec succès
 - [x] Création du dépôt GitHub
 - [x] Push des branches main et develop sur GitHub
+- [x] Configuration Netlify
+- [x] Déploiement Netlify réussi
 
 ## ⏳ Tâches en cours
 
-### 1. Configuration Netlify
-**Instructions détaillées** : Voir `INSTRUCTIONS_NETLIFY.md`
+### 1. Essai de génération PDF
+**Objectif** : Vérifier que la génération PDF fonctionne, surtout sur Netlify (limites de durée des fonctions serverless)
 
-**Résumé** :
-1. Créer un compte Netlify sur https://app.netlify.com
-2. Connecter le dépôt GitHub : https://github.com/mohamedabdou221/dz-multi-services
-3. Configurer le build (npm run build, directory: .)
-4. Ajouter les variables d'environnement depuis .env.local
-5. Activer le déploiement automatique
+**Tâches** :
+- Installer @react-pdf/renderer
+- Créer un test de génération PDF avec les polices Montserrat et Poppins
+- Tester localement
+- Tester sur Netlify pour vérifier la durée limite
 
 ## ⏳ Tâches restantes
 
