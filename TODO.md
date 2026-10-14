@@ -21,48 +21,67 @@
 - [x] Installation de @react-pdf/renderer
 - [x] Création du test de génération PDF
 - [x] API endpoint /api/test-pdf créée
+- [x] Correction TypeScript pour la génération PDF (toBlob au lieu de toBuffer)
+- [x] Build réussi avec génération PDF en ~90ms
+- [x] Déploiement Netlify avec endpoint PDF fonctionnel
 
 ## ⏳ Tâches en cours
 
-### 1. Essai de génération PDF
-**Objectif** : Vérifier que la génération PDF fonctionne, surtout sur Netlify (limites de durée des fonctions serverless)
+### Lot 2 - Base de données et sécurité
+**Objectif** : Appliquer les migrations sur le projet de développement, configurer la sécurité et créer le super-administrateur
 
 **Tâches** :
-- Installer @react-pdf/renderer
-- Créer un test de génération PDF avec les polices Montserrat et Poppins
-- Tester localement
-- Tester sur Netlify pour vérifier la durée limite
+- Appliquer les migrations 0001 à 0004 sur le projet de développement Supabase
+- Vérifier pgcrypto
+- Activer pg_cron
+- Régénérer les types TypeScript
+- Porter les 50 vérifications en tests pgTAP
+- Renseigner les réglages (coordonnées)
+- Créer le premier super-administrateur
+- Configurer les buckets
 
 ## ⏳ Tâches restantes
 
-### 2. Configuration Netlify
-- Créer un compte Netlify
-- Connecter le dépôt GitHub
-- Configurer les variables d'environnement
-- Activer le déploiement automatique
+### Lot 3 - Authentification et rôles
+- @supabase/ssr (clients navigateur, serveur, service)
+- Page de connexion
+- Déconnexion
+- Session persistante
+- Garde des routes /admin
+- Lecture du rôle
+- Double authentification pour ADMIN et SUPER_ADMIN
+- Gestion des utilisateurs par le super-administrateur
 
-### 3. Essai de génération PDF
-- Installer @react-pdf/renderer
-- Créer un test de génération PDF avec les polices
-- Tester sur Netlify pour vérifier la durée limite des fonctions
-
-### 4. Commit et push vers GitHub
-- Committer les changements
-- Pusher la branche develop vers GitHub
-- Créer une PR pour review
+### Lot 4 - Site public et catalogue
+- En-tête et pied de page (coordonnées lues des réglages)
+- Accueil (bandeau, section diaspora)
+- Liste et pages de service alimentées par la base
+- Comment ça marche
+- À propos
+- FAQ
+- Contact (affichage)
+- Pages légales
+- Bouton WhatsApp
+- Métadonnées
+- Plan du site
+- Revalidation à la demande
 
 ## 📋 Validation du Lot 1
 
 Une fois toutes les tâches ci-dessus complétées, vérifier :
-- [ ] Les migrations Supabase sont appliquées sans erreur
-- [ ] Les tables et fonctions sont visibles dans le dashboard Supabase
-- [ ] Le projet Netlify est configuré
-- [ ] La génération PDF fonctionne sur Netlify
-- [ ] Le code est commité et pushé sur GitHub
+- [x] Les migrations Supabase sont appliquées sans erreur
+- [x] Les tables et fonctions sont visibles dans le dashboard Supabase
+- [x] Le projet Netlify est configuré
+- [x] La génération PDF fonctionne sur Netlify
+- [x] Le code est commité et pushé sur GitHub
 
-## 🚀 Prochaine étape
+## ✅ Lot 1 Terminé
 
-Une fois le Lot 1 validé, passer au **Lot 2 - Base de données et sécurité** :
+Le Lot 1 (Fondation du projet) est maintenant terminé et validé.
+
+## 🚀 Prochaine étape : Lot 2 - Base de données et sécurité
+
+Passer au **Lot 2 - Base de données et sécurité** :
 - Appliquer les migrations sur le projet de développement
 - Vérifier pgcrypto
 - Activer pg_cron
