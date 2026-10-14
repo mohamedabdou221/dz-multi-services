@@ -1,6 +1,6 @@
-# Tâches - Lot 1 (Fondation du projet)
+# Tâches - Lot 2 (Base de données et sécurité)
 
-## ✅ Tâches accomplies
+## ✅ Lot 1 - Fondation du projet (Terminé)
 
 - [x] Initialisation Git et création de la branche develop
 - [x] Création du projet Next.js avec TypeScript et Tailwind CSS
@@ -25,32 +25,33 @@
 - [x] Build réussi avec génération PDF en ~90ms
 - [x] Déploiement Netlify avec endpoint PDF fonctionnel
 
+## ✅ Lot 2 - Base de données et sécurité (Terminé)
+
+- [x] Migrations 0001 à 0004 appliquées sur Supabase développement
+- [x] pgcrypto vérifié et activé
+- [x] pg_cron activé
+- [x] Types TypeScript régénérés (lib/supabase/types.ts)
+- [x] 50 tests pgTAP créés (supabase/tests/security_and_schema.sql)
+- [x] Réglages de l'agence renseignés (coordonnées, modes de paiement, etc.)
+- [x] Premier super-administrateur créé (msahazi269@gmail.com)
+- [x] 6 buckets Storage configurés et vérifiés
+
 ## ⏳ Tâches en cours
 
-### Lot 2 - Base de données et sécurité
-**Objectif** : Appliquer les migrations sur le projet de développement, configurer la sécurité et créer le super-administrateur
+### Lot 3 - Authentification et rôles
+**Objectif** : Mettre en place l'authentification complète avec gestion des rôles
 
 **Tâches** :
-- Appliquer les migrations 0001 à 0004 sur le projet de développement Supabase
-- Vérifier pgcrypto
-- Activer pg_cron
-- Régénérer les types TypeScript
-- Porter les 50 vérifications en tests pgTAP
-- Renseigner les réglages (coordonnées)
-- Créer le premier super-administrateur
-- Configurer les buckets
-
-## ⏳ Tâches restantes
-
-### Lot 3 - Authentification et rôles
-- @supabase/ssr (clients navigateur, serveur, service)
-- Page de connexion
-- Déconnexion
-- Session persistante
-- Garde des routes /admin
-- Lecture du rôle
+- Page de connexion (/login)
+- Déconnexion (/logout)
+- Session persistante avec middleware
+- Garde des routes /admin (middleware)
+- Lecture du rôle depuis Supabase
 - Double authentification pour ADMIN et SUPER_ADMIN
 - Gestion des utilisateurs par le super-administrateur
+- Page de profil utilisateur
+
+## ⏳ Tâches restantes
 
 ### Lot 4 - Site public et catalogue
 - En-tête et pied de page (coordonnées lues des réglages)
