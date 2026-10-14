@@ -1,82 +1,71 @@
-# Tâches restantes - Lot 0
+# Tâches - Lot 1 (Fondation du projet)
 
 ## ✅ Tâches accomplies
 
-- [x] Correction du dossier `assetts` → `assets`
-- [x] Création de la structure de dossiers :
-  - `public/brand/logos/`
-  - `public/brand/icons/`
-  - `public/brand/patterns/`
-  - `public/brand/stamp/`
-  - `assets/cahier-des-charges/`
-  - `assets/charte-graphique/`
-  - `assets/photos-prestations/`
-  - `assets/maquettes/`
-  - `decision-notes/`
-- [x] Création de `README.md` à la racine
-- [x] Création de `decision-notes/decisions-lot0.md` (template à remplir)
-- [x] Déplacement de `maquettes.png` dans `assets/maquettes/`
-- [x] Déplacement de `stamp.png` dans `public/brand/stamp/`
-- [x] Ajout de fichiers README dans chaque dossier
-- [x] Ajout de README dans `supabase/`
-- [x] Mise à jour des informations de contact dans la note de décisions
-- [x] Ajout des photos de prestations dans `assets/photos-prestations/`
-- [x] Mise à jour de la note de décisions avec :
-  - Pays : Comores, Devise : KMF
-  - Mode de paiement diaspora : RIA, Western Union, Mobile Money
-  - Signification des numéros 1 à 30 : photos demandées par le client
-  - Envoi de devis : par les employés de l'agence
-  - Canaux de notification : E-mail et WhatsApp
-  - Volume de demandes : élevé
-  - Adresse : Chongoni, OUZIO-MITSAMIOULI, Grande Comores
-- [x] Ajout du cahier des charges v2.2 (Word) dans `assets/cahier-des-charges/`
-- [x] Ajout de la charte graphique (PDF) dans `assets/charte-graphique/`
-- [x] Mise à jour complète de la note de décisions avec toutes les informations fournies
+- [x] Initialisation Git et création de la branche develop
+- [x] Création du projet Next.js avec TypeScript et Tailwind CSS
+- [x] Installation et configuration de shadcn/ui
+- [x] Application du thème de la charte graphique (bordeaux, crème, noir)
+- [x] Configuration des polices (Montserrat et Poppins)
+- [x] Création des clients Supabase (browser, server, service)
+- [x] Configuration des variables d'environnement (.env.local)
+- [x] Création de la structure de dossiers (app, components, lib)
+- [x] Création de la page d'accueil avec branding
+- [x] Commit initial avec message structuré
+- [x] Instructions pour appliquer les migrations Supabase
+- [x] Migrations Supabase appliquées avec succès
+- [x] Création du dépôt GitHub
+- [x] Push des branches main et develop sur GitHub
 
-## ⏳ Tâches à compléter
+## ⏳ Tâches en cours
 
-### 1. Extraction des fichiers graphiques (non nécessaire)
-Les fichiers PNG existants dans `public/brand/` seront utilisés comme référence pendant le développement. Pas besoin d'extraction individuelle.
+### 1. Configuration Netlify
+**Instructions détaillées** : Voir `INSTRUCTIONS_NETLIFY.md`
 
-### 2. Remplir la note de décisions
-Ouvrir `decision-notes/decisions-lot0.md` et remplir les sections restantes avec les décisions prises en concertation avec l'agence.
+**Résumé** :
+1. Créer un compte Netlify sur https://app.netlify.com
+2. Connecter le dépôt GitHub : https://github.com/mohamedabdou221/dz-multi-services
+3. Configurer le build (npm run build, directory: .)
+4. Ajouter les variables d'environnement depuis .env.local
+5. Activer le déploiement automatique
 
-**Points à trancher :**
-- [x] 1. Pays d'activité et devise de référence ✓
-- [x] 2. Mode de paiement de la diaspora ✓
-- [x] 3. Statut légal de l'agence (à vérifier avec le DG) ✓
-- [x] 4. Signification des numéros 1 à 30 ✓
-- [x] 5. Taux d'acompte et conditions d'annulation/remboursement ✓
-- [x] 6. Qui peut envoyer un devis ✓
-- [x] 7. Nombre d'administrateurs et d'agents (à définir par le DG) ✓
-- [x] 8. Canaux de notification ✓
-- [x] 9. Langues du site (V1: français uniquement) ✓
-- [x] 10. Volume de demandes attendu ✓
-- [x] 11. Listes de services (voir cahier des charges) ✓
-- [x] 12. Informations de l'agence ✓
-- [x] 13. Facturation fiscale (Non) ✓
-- [x] 14. Nom de domaine (pas encore choisi) ✓
+## ⏳ Tâches restantes
 
-**Note** : Signature non requise.
+### 2. Configuration Netlify
+- Créer un compte Netlify
+- Connecter le dépôt GitHub
+- Configurer les variables d'environnement
+- Activer le déploiement automatique
 
-## 📋 Validation du Lot 0
+### 3. Essai de génération PDF
+- Installer @react-pdf/renderer
+- Créer un test de génération PDF avec les polices
+- Tester sur Netlify pour vérifier la durée limite des fonctions
 
-✅ **Lot 0 terminé !**
+### 4. Commit et push vers GitHub
+- Committer les changements
+- Pusher la branche develop vers GitHub
+- Créer une PR pour review
 
-- [x] Structure de dossiers créée ✓
-- [x] Note de décisions remplie ✓
-- [x] Documents de référence présents ✓
-- [x] Photos de prestations fournies ✓
-- [x] Aucune question bloquante ne reste pour le Lot 2 ✓
-- [x] Fichiers graphiques disponibles comme référence ✓
+## 📋 Validation du Lot 1
+
+Une fois toutes les tâches ci-dessus complétées, vérifier :
+- [ ] Les migrations Supabase sont appliquées sans erreur
+- [ ] Les tables et fonctions sont visibles dans le dashboard Supabase
+- [ ] Le projet Netlify est configuré
+- [ ] La génération PDF fonctionne sur Netlify
+- [ ] Le code est commité et pushé sur GitHub
 
 ## 🚀 Prochaine étape
 
-Une fois le Lot 0 validé, passer au **Lot 1 - Fondation du projet** :
-- Création du dépôt GitHub
-- Initialisation du projet Next.js
-- Configuration de Supabase
-- Configuration de Netlify
-- Essai de génération PDF
+Une fois le Lot 1 validé, passer au **Lot 2 - Base de données et sécurité** :
+- Appliquer les migrations sur le projet de développement
+- Vérifier pgcrypto
+- Activer pg_cron
+- Régénérer les types TypeScript
+- Porter les 50 vérifications en tests pgTAP
+- Renseigner les réglages (coordonnées)
+- Créer le premier super-administrateur
+- Configurer les buckets
 
 Voir `docs/06-plan-implementation.md` § 4 pour le détail.
