@@ -6,15 +6,20 @@ export async function GET() {
   const startTime = Date.now()
 
   try {
-    // Génération du PDF
-    const pdfStream = await pdf(<TestDocument />).toBuffer()
+    // Génération du PDF avec blob
+    const doc = <TestDocument />
+    const pdfBlob = await pdf(doc).toBlob()
 
     const endTime = Date.now()
     const duration = endTime - startTime
 
     console.log(`PDF généré en ${duration}ms`)
 
-    return new NextResponse(pdfStream, {
+    // Convertir le blob en ArrayBuffer puis en Uint8Array
+    const arrayBuffer = await pdfBlob.arrayBuffer()
+    const uint8Array = new Uint8Array(arrayBuffer)
+
+    return new NextResponse(uint8Array, {
       headers: {
         'Content-Type': 'application/pdf',
         'Content-Disposition': 'attachment; filename="test-dz-multiservices.pdf"',
