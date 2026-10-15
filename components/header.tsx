@@ -60,6 +60,12 @@ export default async function Header() {
               À propos
             </Link>
             <Link
+              href="/faq"
+              className="text-sm text-foreground hover:text-muted-foreground transition-colors"
+            >
+              FAQ
+            </Link>
+            <Link
               href="/contact"
               className="text-sm text-foreground hover:text-muted-foreground transition-colors"
             >
