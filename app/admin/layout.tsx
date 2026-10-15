@@ -6,7 +6,7 @@ import type { AppRole } from '@/lib/supabase/types'
 
 export const dynamic = 'force-dynamic'
 
-export default async function AdminLayout({
+async function AdminLayoutContent({
   children,
 }: {
   children: React.ReactNode
@@ -91,10 +91,20 @@ export default async function AdminLayout({
 
       {/* Main content */}
       <main className="flex-1 container mx-auto px-4 sm:px-16 py-8">
-        <Suspense fallback={<div>Chargement...</div>}>
-          {children}
-        </Suspense>
+        {children}
       </main>
     </div>
+  )
+}
+
+export default function AdminLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+  return (
+    <Suspense fallback={<div>Chargement...</div>}>
+      <AdminLayoutContent>{children}</AdminLayoutContent>
+    </Suspense>
   )
 }

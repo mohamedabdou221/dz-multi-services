@@ -1,4 +1,4 @@
-# Tâches - Lot 2 (Base de données et sécurité)
+# Tâches - Lot 3 (Authentification et rôles)
 
 ## ✅ Lot 1 - Fondation du projet (Terminé)
 
@@ -36,24 +36,23 @@
 - [x] Premier super-administrateur créé (msahazi269@gmail.com)
 - [x] 6 buckets Storage configurés et vérifiés
 
+## ✅ Lot 3 - Authentification et rôles (Terminé)
+
+- [x] Middleware pour gestion des sessions Supabase SSR
+- [x] Protection des routes /admin avec middleware
+- [x] Page de connexion (/login) avec formulaire email/mot de passe
+- [x] Page de déconnexion (/logout)
+- [x] Layout admin avec header, navigation et accès par rôle
+- [x] Page dashboard admin avec statistiques
+- [x] Hooks pour vérification des rôles (getUserRole, isStaff, isAdmin, isSuperAdmin)
+- [x] Lien de connexion sur la page d'accueil
+
 ## ⏳ Tâches en cours
 
-### Lot 3 - Authentification et rôles
-**Objectif** : Mettre en place l'authentification complète avec gestion des rôles
+### Lot 4 - Site public et catalogue
+**Objectif** : Créer le site public avec le catalogue de services
 
 **Tâches** :
-- Page de connexion (/login)
-- Déconnexion (/logout)
-- Session persistante avec middleware
-- Garde des routes /admin (middleware)
-- Lecture du rôle depuis Supabase
-- Double authentification pour ADMIN et SUPER_ADMIN
-- Gestion des utilisateurs par le super-administrateur
-- Page de profil utilisateur
-
-## ⏳ Tâches restantes
-
-### Lot 4 - Site public et catalogue
 - En-tête et pied de page (coordonnées lues des réglages)
 - Accueil (bandeau, section diaspora)
 - Liste et pages de service alimentées par la base
@@ -63,9 +62,25 @@
 - Contact (affichage)
 - Pages légales
 - Bouton WhatsApp
-- Métadonnées
+- Métadonnées SEO
 - Plan du site
 - Revalidation à la demande
+
+## ⏳ Tâches restantes
+
+### Lot 5 - Formulaire de mariage
+- Étapes 1 à 9 du formulaire de mariage
+- Bloc "Pour qui ?" réutilisable
+- Prestations connues et libres
+- Planning dynamique
+- Grille 1 à 30
+- Téléversement par URL signée
+- Turnstile (anti-spam)
+- Récapitulatif
+- Brouillon local
+- Appel de submit_request
+- Écran de confirmation avec référence
+- E-mail de confirmation
 
 ## 📋 Validation du Lot 1
 
