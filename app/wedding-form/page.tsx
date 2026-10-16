@@ -2,8 +2,10 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 
 export default function WeddingFormPage() {
+  const router = useRouter()
   const [currentStep, setCurrentStep] = useState(1)
   const [formData, setFormData] = useState({
     // Step 1: Pour qui
@@ -71,7 +73,10 @@ export default function WeddingFormPage() {
     e.preventDefault()
     // TODO: Implement actual submission
     console.log('Form submitted:', formData)
-    alert('Demande soumise avec succès !')
+    // Generate a reference
+    const reference = `REQ-${Date.now().toString().slice(-6)}`
+    // Redirect to confirmation page
+    router.push(`/request-confirmation?reference=${encodeURIComponent(reference)}`)
   }
 
   return (
