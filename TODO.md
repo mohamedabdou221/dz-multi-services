@@ -1,4 +1,4 @@
-# Tâches - Lot 3 (Authentification et rôles)
+# Tâches - Progression du projet
 
 ## ✅ Lot 1 - Fondation du projet (Terminé)
 
@@ -6,7 +6,7 @@
 - [x] Création du projet Next.js avec TypeScript et Tailwind CSS
 - [x] Installation et configuration de shadcn/ui
 - [x] Application du thème de la charte graphique (bordeaux, crème, noir)
-- [x] Configuration des polices (Montserrat et Poppins)
+- [x] Configuration des polices (Montserrat et Work Sans)
 - [x] Création des clients Supabase (browser, server, service)
 - [x] Configuration des variables d'environnement (.env.local)
 - [x] Création de la structure de dossiers (app, components, lib)
@@ -47,64 +47,71 @@
 - [x] Hooks pour vérification des rôles (getUserRole, isStaff, isAdmin, isSuperAdmin)
 - [x] Lien de connexion sur la page d'accueil
 
-## ⏳ Tâches en cours
+## ✅ Lot 4 - Site public et catalogue (Terminé)
 
-### Lot 4 - Site public et catalogue
-**Objectif** : Créer le site public avec le catalogue de services
+- [x] Header avec coordonnées depuis site_settings
+- [x] Footer avec coordonnées depuis site_settings
+- [x] Page liste des services (/services)
+- [x] Page détail d'un service (/services/[slug])
+- [x] Page Comment ça marche (/how-it-works)
+- [x] Page À propos (/about)
+- [x] Page FAQ (/faq)
+- [x] Page Contact (/contact)
+- [x] Pages légales (mentions, privacy, terms)
 
-**Tâches** :
-- En-tête et pied de page (coordonnées lues des réglages)
-- Accueil (bandeau, section diaspora)
-- Liste et pages de service alimentées par la base
-- Comment ça marche
-- À propos
-- FAQ
-- Contact (affichage)
-- Pages légales
-- Bouton WhatsApp
-- Métadonnées SEO
-- Plan du site
-- Revalidation à la demande
+## ✅ Lot 5 - Formulaire de mariage (Terminé)
 
-## ⏳ Tâches restantes
+- [x] Page formulaire de mariage avec 9 étapes (/wedding-form)
+- [x] Étape 1: Pour qui (moi ou quelqu'un d'autre)
+- [x] Étape 2: Date et lieu
+- [x] Étape 3: Type de mariage
+- [x] Étape 4: Prestations
+- [x] Étape 5: Planning
+- [x] Étape 6: Invités
+- [x] Étape 7: Fichiers
+- [x] Étape 8: Notes
+- [x] Étape 9: Confirmation
+- [x] Page de confirmation après soumission
+- [x] Navigation multi-étapes avec progress bar
 
-### Lot 5 - Formulaire de mariage
-- Étapes 1 à 9 du formulaire de mariage
-- Bloc "Pour qui ?" réutilisable
-- Prestations connues et libres
-- Planning dynamique
-- Grille 1 à 30
-- Téléversement par URL signée
-- Turnstile (anti-spam)
-- Récapitulatif
-- Brouillon local
-- Appel de submit_request
-- Écran de confirmation avec référence
-- E-mail de confirmation
+## ⏳ Lot 6 - Autres formulaires de service (À faire)
 
-## 📋 Validation du Lot 1
+- [ ] Formulaire photographie
+- [ ] Formulaire publicité
+- [ ] Formulaire imprimerie
+- [ ] Formulaire autre service générique
 
-Une fois toutes les tâches ci-dessus complétées, vérifier :
-- [x] Les migrations Supabase sont appliquées sans erreur
-- [x] Les tables et fonctions sont visibles dans le dashboard Supabase
-- [x] Le projet Netlify est configuré
-- [x] La génération PDF fonctionne sur Netlify
-- [x] Le code est commité et pushé sur GitHub
+## ⏳ Lot 7 - Gestion des demandes (En cours)
 
-## ✅ Lot 1 Terminé
+- [x] Page liste des demandes (/admin/requests)
+- [x] Page liste des devis (/admin/quotes)
+- [x] Page liste des utilisateurs (/admin/users)
+- [ ] Page détail d'une demande
+- [ ] Création de devis depuis une demande
+- [ ] Changement de statut des demandes
+- [ ] Assignation à un agent
 
-Le Lot 1 (Fondation du projet) est maintenant terminé et validé.
+## ⏳ Lot 8 - Devis et PDF documents (À faire)
 
-## 🚀 Prochaine étape : Lot 2 - Base de données et sécurité
+- [ ] Génération PDF de devis
+- [ ] Génération PDF de reçu
+- [ ] Génération PDF de fiche technique
+- [ ] Envoi de devis par e-mail
+- [ ] Téléchargement PDF client
 
-Passer au **Lot 2 - Base de données et sécurité** :
-- Appliquer les migrations sur le projet de développement
-- Vérifier pgcrypto
-- Activer pg_cron
-- Régénérer les types TypeScript
-- Porter les 50 vérifications en tests pgTAP
-- Renseigner les réglages (coordonnées)
-- Créer le premier super-administrateur
-- Configurer les buckets
+## ⏳ Lot 9 - Paiements et dashboard expansion (À faire)
 
-Voir `docs/06-plan-implementation.md` § 4 pour le détail.
+- [ ] Intégration des modes de paiement
+- [ ] Dashboard client
+- [ ] Suivi des paiements
+- [ ] Historique des commandes
+- [ ] Notifications
+
+## ⏳ Lot 10 - Sécurité et déploiement pilote (À faire)
+
+- [ ] Double authentification pour ADMIN et SUPER_ADMIN
+- [ ] Rate limiting et anti-spam
+- [ ] Security headers et CSP
+- [ ] Tests d'acceptation
+- [ ] Déploiement pilote
+- [ ] Monitoring et logs
