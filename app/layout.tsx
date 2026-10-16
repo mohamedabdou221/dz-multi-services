@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Montserrat, Poppins } from "next/font/google";
+import { Montserrat, Work_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
@@ -11,7 +11,7 @@ const montserrat = Montserrat({
   display: "swap",
 });
 
-const poppins = Poppins({
+const workSans = Work_Sans({
   variable: "--font-texte",
   subsets: ["latin"],
   weight: ["400", "500", "600"],
@@ -27,7 +27,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="fr"
-      className={`${montserrat.variable} ${poppins.variable} h-full antialiased`}
+      className={`${montserrat.variable} ${workSans.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <Header />

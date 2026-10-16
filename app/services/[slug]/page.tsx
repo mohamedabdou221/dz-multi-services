@@ -70,7 +70,7 @@ export default async function ServiceDetailPage({
 
         <div className="flex gap-4">
           <Link
-            href="/contact"
+            href="/wedding-form"
             className="px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:opacity-90 transition-colors"
           >
             Demander un devis

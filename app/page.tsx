@@ -20,7 +20,7 @@ export default function Home() {
           Découvrir nos services
         </Link>
         <Link
-          href="/contact"
+          href="/wedding-form"
           className="flex h-12 w-full sm:w-auto items-center justify-center gap-2 rounded-lg border-2 border-foreground px-8 text-foreground font-semibold transition-colors hover:bg-secondary hover:text-secondary-foreground"
         >
           Commander pour un proche
