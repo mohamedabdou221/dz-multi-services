@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
+import { submitWeddingRequest } from './actions'
 
 export default function WeddingFormPage() {
   const router = useRouter()
@@ -71,9 +72,30 @@ export default function WeddingFormPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // TODO: Implement actual submission
-    console.log('Form submitted:', formData)
-    // Generate a reference
+    
+    // Create FormData
+    const formDataToSend = new FormData()
+    formDataToSend.append('forMyself', formData.isForMe.toString())
+    formDataToSend.append('firstName', formData.clientName)
+    formDataToSend.append('lastName', '') // Not currently in form
+    formDataToSend.append('email', formData.clientEmail)
+    formDataToSend.append('phone', formData.clientPhone)
+    formDataToSend.append('weddingDate', formData.weddingDate)
+    formDataToSend.append('location', formData.location)
+    formDataToSend.append('weddingType', formData.weddingType)
+    formDataToSend.append('guests', formData.guestCount.toString())
+    formDataToSend.append('description', formData.notes)
+
+    // Submit to server
+    const result = await submitWeddingRequest(formDataToSend)
+    
+    if (result.error) {
+      console.error('Submission error:', result.error)
+      alert(result.error)
+      return
+    }
+
+    // Generate a reference (should come from server in production)
     const reference = `REQ-${Date.now().toString().slice(-6)}`
     // Redirect to confirmation page
     router.push(`/request-confirmation?reference=${encodeURIComponent(reference)}`)
