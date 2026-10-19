@@ -386,6 +386,132 @@ async function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Footer */}
+      <footer className="bg-secondary text-secondary-foreground border-t border-border">
+        <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+            {/* Brand */}
+            <div className="space-y-4">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+                  <span className="text-primary-foreground font-heading font-bold text-xl">Dz</span>
+                </div>
+                <div>
+                  <span className="text-lg font-heading font-bold text-secondary-foreground block">
+                    {agencyName}
+                  </span>
+                  <span className="text-xs text-muted-foreground block tracking-wide uppercase">
+                    Multi-Services
+                  </span>
+                </div>
+              </div>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Plus qu'un service, une solution. Votre partenaire de confiance pour tous vos besoins aux Comores et dans la diaspora.
+              </p>
+            </div>
+
+            {/* Contact */}
+            <div className="space-y-4">
+              <h3 className="text-sm font-semibold text-secondary-foreground uppercase tracking-wider">
+                Contact
+              </h3>
+              <div className="space-y-3">
+                {agencyAddress && (
+                  <div className="flex items-start gap-3 text-sm text-muted-foreground">
+                    <span className="text-xl">📍</span>
+                    <span>{agencyAddress}</span>
+                  </div>
+                )}
+                {agencyPhone && (
+                  <a
+                    href={`tel:${agencyPhone}`}
+                    className="flex items-center gap-3 text-sm text-muted-foreground hover:text-secondary-foreground transition-colors"
+                  >
+                    <span className="text-xl">📞</span>
+                    {agencyPhone}
+                  </a>
+                )}
+                {agencyEmail && (
+                  <a
+                    href={`mailto:${agencyEmail}`}
+                    className="flex items-center gap-3 text-sm text-muted-foreground hover:text-secondary-foreground transition-colors"
+                  >
+                    <span className="text-xl">✉️</span>
+                    {agencyEmail}
+                  </a>
+                )}
+              </div>
+            </div>
+
+            {/* Links */}
+            <div className="space-y-4">
+              <h3 className="text-sm font-semibold text-secondary-foreground uppercase tracking-wider">
+                Navigation
+              </h3>
+              <div className="space-y-3">
+                <Link
+                  href="/services"
+                  className="block text-sm text-muted-foreground hover:text-secondary-foreground transition-colors"
+                >
+                  Services
+                </Link>
+                <Link
+                  href="/how-it-works"
+                  className="block text-sm text-muted-foreground hover:text-secondary-foreground transition-colors"
+                >
+                  Comment ça marche
+                </Link>
+                <Link
+                  href="/about"
+                  className="block text-sm text-muted-foreground hover:text-secondary-foreground transition-colors"
+                >
+                  À propos
+                </Link>
+                <Link
+                  href="/faq"
+                  className="block text-sm text-muted-foreground hover:text-secondary-foreground transition-colors"
+                >
+                  FAQ
+                </Link>
+                <Link
+                  href="/contact"
+                  className="block text-sm text-muted-foreground hover:text-secondary-foreground transition-colors"
+                >
+                  Contact
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom */}
+          <div className="mt-12 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-sm text-muted-foreground">
+              © {new Date().getFullYear()} {agencyName}. Tous droits réservés.
+            </p>
+            <div className="flex gap-6">
+              <Link
+                href="/legal/mentions"
+                className="text-sm text-muted-foreground hover:text-secondary-foreground transition-colors"
+              >
+                Mentions légales
+              </Link>
+              <Link
+                href="/legal/privacy"
+                className="text-sm text-muted-foreground hover:text-secondary-foreground transition-colors"
+              >
+                Politique de confidentialité
+              </Link>
+              <Link
+                href="/legal/terms"
+                className="text-sm text-muted-foreground hover:text-secondary-foreground transition-colors"
+              >
+                Conditions d'utilisation
+              </Link>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   )
 }

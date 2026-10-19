@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Header from "@/components/header";
-import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
   title: "Dz Multi-Services - Plus qu'un service, une solution",
@@ -22,9 +20,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         />
       </head>
       <body className="min-h-full flex flex-col">
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        {children}
       </body>
     </html>
   );
