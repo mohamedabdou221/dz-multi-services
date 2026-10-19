@@ -73,45 +73,61 @@
 - [x] Étape 9: Confirmation
 - [x] Page de confirmation après soumission
 - [x] Navigation multi-étapes avec progress bar
+- [x] Fonction RPC submit_request créée
+- [x] Server action pour soumission de formulaire
+- [x] Formulaire connecté à la base de données
 
-## ⏳ Lot 6 - Autres formulaires de service (À faire)
+## ✅ Lot 6 - Autres formulaires de service (Terminé)
 
-- [ ] Formulaire photographie
-- [ ] Formulaire publicité
-- [ ] Formulaire imprimerie
-- [ ] Formulaire autre service générique
+- [x] Formulaire de demande de service générique (/service-request-form)
+- [x] 4 étapes: destinataire, coordonnées, détails du service, infos supplémentaires
+- [x] Support pour soi-même ou pour quelqu'un d'autre
+- [x] Sélection de type de service (photographie, publicité, impression, autre)
 
-## ⏳ Lot 7 - Gestion des demandes (En cours)
+## ✅ Lot 7 - Gestion des demandes (Terminé)
 
 - [x] Page liste des demandes (/admin/requests)
+- [x] Page détail d'une demande (/admin/requests/[id])
 - [x] Page liste des devis (/admin/quotes)
+- [x] Page détail d'un devis (/admin/quotes/[id])
+- [x] Page création de devis (/admin/quotes/create)
 - [x] Page liste des utilisateurs (/admin/users)
-- [ ] Page détail d'une demande
-- [ ] Création de devis depuis une demande
-- [ ] Changement de statut des demandes
-- [ ] Assignation à un agent
+- [x] Page détail utilisateur (/admin/users/[id])
+- [x] Dashboard client (/dashboard)
+- [x] Protection des routes dashboard et payment dans middleware
+- [x] Lien "Mon Dashboard" dans header pour utilisateurs authentifiés
 
-## ⏳ Lot 8 - Devis et PDF documents (À faire)
+## ✅ Lot 8 - Devis et PDF documents (Terminé)
 
-- [ ] Génération PDF de devis
-- [ ] Génération PDF de reçu
-- [ ] Génération PDF de fiche technique
-- [ ] Envoi de devis par e-mail
-- [ ] Téléchargement PDF client
+- [x] Composant QuotePDF pour génération de devis
+- [x] Composant ReceiptPDF pour génération de reçus
+- [x] Composant TechnicalSheetPDF pour fiches techniques
+- [x] API endpoint /api/generate-quote-pdf
+- [x] Design PDF avec charte graphique (bordeaux, crème, noir)
+- [x] Montserrat font pour PDF
+- [x] Page de paiement (/payment)
+- [x] Layout de paiement avec authentification
+- [x] Options de paiement: RIA, Mobile Money, Western Union, Espèces
 
 ## ⏳ Lot 9 - Paiements et dashboard expansion (À faire)
 
-- [ ] Intégration des modes de paiement
-- [ ] Dashboard client
-- [ ] Suivi des paiements
-- [ ] Historique des commandes
-- [ ] Notifications
+- [ ] Intégration réelle avec les fournisseurs de paiement
+- [ ] Traitement des paiements
+- [ ] Enregistrement des paiements dans la base de données
+- [ ] Mise à jour du statut des devis après paiement
+- [ ] Envoi de reçu PDF après paiement
+- [ ] Historique des paiements dans dashboard client
+- [ ] Notifications de paiement
 
 ## ⏳ Lot 10 - Sécurité et déploiement pilote (À faire)
 
 - [ ] Double authentification pour ADMIN et SUPER_ADMIN
 - [ ] Rate limiting et anti-spam
+- [ ] Integration Turnstile anti-spam
 - [ ] Security headers et CSP
 - [ ] Tests d'acceptation
 - [ ] Déploiement pilote
 - [ ] Monitoring et logs
+- [ ] Migration middleware vers proxy (Next.js 16)
+- [ ] Adaptation visuelle complète avec design Stitch
+- [ ] Intégration des assets (logo, images, cachet)
