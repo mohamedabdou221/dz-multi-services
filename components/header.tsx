@@ -23,61 +23,66 @@ export default async function Header() {
   const { data: { user } } = await supabase.auth.getUser()
 
   return (
-    <header className="border-b border-border bg-card">
-      <div className="container mx-auto px-4 sm:px-16">
-        <div className="flex items-center justify-between h-16">
+    <header className="border-b border-border bg-card sticky top-0 z-50 backdrop-blur-sm bg-opacity-95">
+      <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-12">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-              <span className="text-primary-foreground font-heading font-bold text-xl">Dz</span>
+          <Link href="/" className="flex items-center gap-3">
+            <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center shadow-sm">
+              <span className="text-primary-foreground font-heading font-bold text-2xl">Dz</span>
             </div>
-            <span className="text-xl font-heading font-bold text-foreground hidden sm:block">
-              {agencyName}
-            </span>
+            <div>
+              <span className="text-xl font-heading font-bold text-foreground block">
+                {agencyName}
+              </span>
+              <span className="text-xs text-muted-foreground block tracking-wide uppercase">
+                Multi-Services
+              </span>
+            </div>
           </Link>
 
           {/* Navigation */}
-          <nav className="hidden md:flex items-center gap-6">
+          <nav className="hidden lg:flex items-center gap-8">
             <Link
               href="/"
-              className="text-sm text-foreground hover:text-muted-foreground transition-colors"
+              className="text-sm font-medium text-foreground hover:text-primary transition-colors"
             >
               Accueil
             </Link>
             <Link
               href="/services"
-              className="text-sm text-foreground hover:text-muted-foreground transition-colors"
+              className="text-sm font-medium text-foreground hover:text-primary transition-colors"
             >
               Services
             </Link>
             <Link
               href="/how-it-works"
-              className="text-sm text-foreground hover:text-muted-foreground transition-colors"
+              className="text-sm font-medium text-foreground hover:text-primary transition-colors"
             >
               Comment ça marche
             </Link>
             <Link
               href="/about"
-              className="text-sm text-foreground hover:text-muted-foreground transition-colors"
+              className="text-sm font-medium text-foreground hover:text-primary transition-colors"
             >
               À propos
             </Link>
             <Link
               href="/faq"
-              className="text-sm text-foreground hover:text-muted-foreground transition-colors"
+              className="text-sm font-medium text-foreground hover:text-primary transition-colors"
             >
               FAQ
             </Link>
             <Link
               href="/contact"
-              className="text-sm text-foreground hover:text-muted-foreground transition-colors"
+              className="text-sm font-medium text-foreground hover:text-primary transition-colors"
             >
               Contact
             </Link>
             {user && (
               <Link
                 href="/dashboard"
-                className="text-sm text-primary font-semibold hover:opacity-90 transition-colors"
+                className="text-sm font-semibold text-primary hover:opacity-90 transition-colors"
               >
                 Mon Dashboard
               </Link>
@@ -85,27 +90,33 @@ export default async function Header() {
           </nav>
 
           {/* Contact info */}
-          <div className="hidden lg:flex items-center gap-4 text-sm text-muted-foreground">
+          <div className="hidden xl:flex items-center gap-6 text-sm">
             {agencyPhone && (
               <a
                 href={`tel:${agencyPhone}`}
-                className="hover:text-foreground transition-colors"
+                className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
               >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.286 3 8V5z" />
+                </svg>
                 {agencyPhone}
               </a>
             )}
             {agencyEmail && (
               <a
                 href={`mailto:${agencyEmail}`}
-                className="hover:text-foreground transition-colors"
+                className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
               >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
                 {agencyEmail}
               </a>
             )}
           </div>
 
           {/* Mobile menu button */}
-          <button className="md:hidden p-2 text-foreground hover:text-muted-foreground">
+          <button className="lg:hidden p-2 text-foreground hover:text-primary transition-colors">
             <svg
               className="w-6 h-6"
               fill="none"
