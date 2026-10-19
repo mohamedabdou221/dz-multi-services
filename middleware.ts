@@ -53,6 +53,15 @@ export async function middleware(request: NextRequest) {
     return NextResponse.redirect(url)
   }
 
+  // Protect /payment routes - only authenticated users can access
+  if (request.nextUrl.pathname.startsWith('/payment') && !user) {
+    // Redirect to login if not authenticated
+    const url = request.nextUrl.clone()
+    url.pathname = '/login'
+    url.searchParams.set('redirect', request.nextUrl.pathname)
+    return NextResponse.redirect(url)
+  }
+
   return supabaseResponse
 }
 
