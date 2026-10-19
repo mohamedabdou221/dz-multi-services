@@ -19,6 +19,9 @@ export default async function Header() {
   const agencyPhone = (settingsMap.get('agency_phone') as string) || ''
   const agencyEmail = (settingsMap.get('agency_email') as string) || ''
 
+  // Check if user is authenticated
+  const { data: { user } } = await supabase.auth.getUser()
+
   return (
     <header className="border-b border-border bg-card">
       <div className="container mx-auto px-4 sm:px-16">
@@ -71,6 +74,14 @@ export default async function Header() {
             >
               Contact
             </Link>
+            {user && (
+              <Link
+                href="/dashboard"
+                className="text-sm text-primary font-semibold hover:opacity-90 transition-colors"
+              >
+                Mon Dashboard
+              </Link>
+            )}
           </nav>
 
           {/* Contact info */}
